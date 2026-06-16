@@ -6,7 +6,7 @@ O projeto usa o runtime da linguagem Azulejo para abrir arquivos `.azlj` no **L�
 
 Como a linguagem Azulejo não oferece entrada de dados pelo terminal, a seleção da disciplina fica em `menu.lua`. Os conteúdos exibidos para as disciplinas ficam nos arquivos `.azlj`.
 
-A proposta é representar três disciplinas do curso por meio de pequenas cenas animadas em estilo 16-bit.
+A proposta é representar três disciplinas do curso por meio de pequenas cenas animadas em estilo 16-bit baseado em Castlevania (~~porque era o que eu mais tava jogando~~).
 
 ## Programas disponíveis
 
