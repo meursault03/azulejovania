@@ -164,6 +164,6 @@ azulejovania/
 
 ## Observação sobre autoria
 
-A implementação da linguagem Azulejo em `source/` vem da base do trabalho em equipe.
+O repositório original é [Azulejo](https://github.com/Anthhon/azulejo/tree/main) esolang criada para a disciplina de paradigmas de programação. Tonha is added
 
 A parte individual deste repositório é composta pelo menu de execução e pelos programas `.azlj` na pasta `programas/`.
