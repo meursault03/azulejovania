@@ -1,44 +1,14 @@
 # Azulejovania
 
-Projeto de animações em pixel art 16-bit com clima gótico, feito na base da linguagem **Azulejo**.  
-Arquivos Azulejo têm extensão `.azlj`. O runtime é gerenciado pela **LÖVE2D**.
+Azulejovania é um conjunto de animações em pixel art feitas com a linguagem **Azulejo**.
 
-## Propósito
+O projeto usa o runtime da linguagem Azulejo para abrir arquivos `.azlj` no **LÖVE2D** e adiciona um menu em Lua para escolher qual animação executar.
 
-Azulejovania usa a DSL declarativa Azulejo para desenhar cenas em grade de pixels. Cada programa descreve uma disciplina como uma cena visual animada usando comandos simples. A base Azulejo não é Turing-completa — e nem precisa ser.
+A proposta é representar três disciplinas do curso por meio de pequenas cenas animadas em estilo 16-bit.
 
-## Trabalho Individual: Menu de Disciplinas
+## Programas disponíveis
 
-Este repositório inclui um menu em Lua para executar três pequenos programas de Azulejovania feitos sobre a base Azulejo:
-
-- `programas/estruturas_dados.azlj`: castelo/vitral com árvore binária acendendo.
-- `programas/algebra_linear.azlj`: sala gótica com eixos e vetores brilhando.
-- `programas/circuitos_digitais.azlj`: torre elétrica com portas lógicas e sinal acendendo.
-
-O menu não altera a linguagem. Ele só chama o runtime já existente com o comando:
-
-```bash
-love source/ programas/nome_do_programa.azlj
-```
-
-### Para quem nunca usou Lua
-
-Lua é a linguagem usada no arquivo `menu.lua`. Para rodar este trabalho você não precisa programar em Lua; só precisa ter o comando `lua` disponível no terminal para abrir o menu.
-
-Você também precisa instalar o **LÖVE2D**, que é o programa que abre a janela gráfica das animações.
-
-1. Instale o LÖVE2D 11.x: <https://love2d.org/>
-2. Instale Lua, caso o comando `lua` ainda não exista no terminal.
-3. Abra o terminal na pasta do projeto.
-
-No Windows PowerShell, por exemplo:
-
-```powershell
-cd C:\caminho\para\azulejovania
-lua menu.lua
-```
-
-Depois escolha uma opção:
+O menu executa três animações:
 
 ```text
 1 - Estruturas de Dados
@@ -47,223 +17,153 @@ Depois escolha uma opção:
 0 - Sair
 ```
 
-Ao escolher uma disciplina, o menu executa a animação correspondente no LÖVE2D. Para fechar a animação, feche a janela ou pressione `Esc`.
+Arquivos principais:
 
-### Se o comando `love` não funcionar
+```text
+menu.lua
+programas/estruturas_dados.azlj
+programas/algebra_linear.azlj
+programas/circuitos_digitais.azlj
+source/
+```
 
-O menu usa o comando `love`. Se o LÖVE2D estiver instalado, mas o terminal não reconhecer `love`, você tem duas opções:
+A pasta `source/` contém o runtime da linguagem Azulejo.
 
-- Adicionar o LÖVE2D ao `PATH` do sistema.
-- Informar o caminho do executável antes de rodar o menu.
+A pasta `programas/` contém os programas escritos em Azulejo para este trabalho.
 
-No Windows PowerShell:
+## Requisitos
+
+Para executar o projeto, é necessário ter instalado:
+
+* Lua, para abrir o menu pelo terminal.
+* LÖVE2D 11.x, para executar a janela gráfica das animações.
+
+Links:
+
+```text
+https://www.lua.org/
+https://love2d.org/
+```
+
+No Windows, depois de instalar o LÖVE2D, verifique se o comando abaixo funciona no PowerShell:
+
+```powershell
+love --version
+```
+
+Se o comando não for reconhecido, o LÖVE2D provavelmente não está no `PATH` do sistema.
+
+## Como executar pelo menu
+
+Abra o terminal na pasta do projeto:
+
+```powershell
+cd C:\caminho\para\azulejovania
+```
+
+Execute:
+
+```powershell
+lua menu.lua
+```
+
+Escolha uma das opções do menu.
+
+Ao selecionar uma disciplina, o menu chama o runtime da linguagem com o arquivo `.azlj` correspondente.
+
+Exemplo do que o menu executa internamente:
+
+```powershell
+love source/ programas/estruturas_dados.azlj
+```
+
+Para fechar a animação, feche a janela do LÖVE2D ou pressione `Esc`.
+
+## Se o comando `love` não funcionar
+
+Se o LÖVE2D estiver instalado, mas o terminal não reconhecer o comando `love`, existem duas opções.
+
+A primeira é adicionar o LÖVE2D ao `PATH` do Windows.
+
+A segunda é informar manualmente o caminho do executável antes de rodar o menu:
 
 ```powershell
 $env:LOVE_CMD = "C:\Program Files\LOVE\love.exe"
 lua menu.lua
 ```
 
-### Rodar sem o menu
+Ajuste o caminho caso o LÖVE2D esteja instalado em outra pasta.
 
-Se você ainda não tiver Lua instalado, pode executar cada programa diretamente pelo LÖVE2D:
+## Como executar sem o menu
 
-```bash
+Também é possível abrir cada animação diretamente:
+
+```powershell
 love source/ programas/estruturas_dados.azlj
 love source/ programas/algebra_linear.azlj
 love source/ programas/circuitos_digitais.azlj
 ```
 
-No Windows PowerShell, usando o caminho completo do LÖVE2D:
+Usando o caminho completo do LÖVE2D no Windows:
 
 ```powershell
 & "C:\Program Files\LOVE\love.exe" source/ programas/estruturas_dados.azlj
 ```
 
-## Como Usar
+## Como os arquivos funcionam
 
-```bash
-love source/ caminho/para/arquivo.azlj
+O menu é escrito em Lua comum. Ele lê a opção digitada no terminal e executa o arquivo `.azlj` correspondente.
+
+As animações ficam nos arquivos Azulejo:
+
+```text
+programas/estruturas_dados.azlj
+programas/algebra_linear.azlj
+programas/circuitos_digitais.azlj
 ```
 
----
+Cada arquivo `.azlj` descreve uma cena em grade de pixels usando comandos da linguagem, como:
 
-## Tipos
-
-| Tipo | Descrição | Exemplo |
-|------|-----------|---------|
-| `int` | Inteiro positivo | `16`, `255` |
-| `coord` | Par de coordenadas | `2,4` |
-| `color` | Hex RGB ou RGBA | `#FF0000`, `#FF0000FF` |
-| `size` | Dimensão do canvas | `16x16` |
-
----
-
-## Comandos
-
-### Canvas
-
-```
-size LARGURAxALTURA
-```
-**Obrigatório. Deve ser o primeiro comando.** Define tamanho da grade.
-
-```
-background #RRGGBB
-```
-Preenche fundo com cor sólida. Padrão: branco.
-
-### Cor
-
-```
-color #RRGGBB
-```
-Define cor ativa para todos os comandos de desenho seguintes.
-
-### Primitivas de Desenho
-
-```
-pixel x,y
-```
-Pixel único em `x,y`.
-
-```
-line x1,y1 x2,y2
-```
-Linha de `(x1,y1)` até `(x2,y2)`.
-
-```
-rect x1,y1 x2,y2
-```
-Retângulo vazio.
-
-```
-fill x1,y1 x2,y2
-```
-Retângulo preenchido.
-
-```
-circle x,y r
-```
-Círculo com centro `(x,y)` e raio `r`.
-
----
-
-### Animação
-
-Azulejo suporta animações frame-a-frame. Comandos de metadados vão **antes do primeiro `@frame`**. Comandos de desenho antes do primeiro `@frame` são executados em **todos os frames** (útil para background e elementos fixos).
-
-#### Metadados
-
-```
+```azlj
+size 64x36
 type animation
-```
-Declara arquivo como animação. Padrão: `image`.
-
-```
-framerate N
-```
-No runtime atual, `N` é o tempo em segundos entre um frame e outro. Padrão: `1.0`. Deve ser `> 0`.
-
-Exemplos: `0.10`, `0.12`, `0.15`.
-
-```
-loop true
-loop true N
+framerate 0.10
 loop false
-```
-Ativa loop. `N` opcional define número de repetições (`>= 1`). Sem `N`: loop infinito.
 
-#### Frames
-
-```
-@frame
-```
-Marca início de um novo frame. Cada bloco entre marcadores é um frame independente.
-
----
-
-## Estrutura de um Arquivo de Animação
-
-```azlj
--- animacao.azlj
-size 16x16
-type animation
-framerate 0.12
-loop true
-
-background #1a1a2e   -- executado em todos os frames
+background #080711
 
 @frame
-color #e94560
-fill 4,4 8,8
-
-@frame
-color #e94560
-fill 8,8 12,12
-
-@frame
-color #e94560
-fill 4,8 8,12
+color #F5C542
+circle 24,8 2
 ```
 
-> Comandos antes do primeiro `@frame` rodam como um conjunto de comandos fixos antes da execução de cada frame.  
-> Se não houver nenhum `@frame`, o arquivo inteiro é tratado como imagem estática.
+Comandos antes do primeiro `@frame` formam a base fixa da cena.
 
----
+Comandos depois de cada `@frame` formam os quadros da animação.
 
-## Exemplo — Imagem Estática
+Neste runtime, o valor de `framerate` funciona como intervalo entre frames, em segundos. Por isso os programas usam valores como `0.08`, `0.10` ou `0.12`.
 
-```azlj
--- hello.azlj
-size 16x16
-background #1a1a2e
-color #e94560
-fill 4,4 12,12
-color #ffffff
-pixel 6,7
-pixel 10,7
-line 6,10 10,10
-```
+## Estrutura do projeto
 
----
-
-## Comentários
-
-```
--- comentário de linha
-```
-
-Comentários podem aparecer no final de qualquer linha.
-
----
-
-## Estrutura do Projeto
-
-```
+```text
 azulejovania/
 ├── README.md
-├── source/
-│   ├── main.lua        # entry point LÖVE2D
-│   ├── tokenizer.lua
-│   ├── parser.lua
-│   ├── draw.lua
-│   ├── state.lua
-│   └── debug.lua
-└── examples/
-    ├── hello.azlj
-    └── ...
+├── menu.lua
+├── programas/
+│   ├── estruturas_dados.azlj
+│   ├── algebra_linear.azlj
+│   └── circuitos_digitais.azlj
+└── source/
+    ├── main.lua
+    ├── tokenizer.lua
+    ├── parser.lua
+    ├── draw.lua
+    ├── state.lua
+    └── debug.lua
 ```
 
----
+## Observação sobre autoria
 
-## Dependências
+A implementação da linguagem Azulejo em `source/` vem da base do trabalho em equipe.
 
-- [Lua](https://www.lua.org/)
-- [LÖVE2D 11.x](https://love2d.org/)
-
----
-
-## Roadmap
-
-- [ ] `repeat` / blocos de repetição
-- [ ] `sprite` / `stamp` (sprites reutilizáveis)
+A parte individual deste repositório é composta pelo menu de execução e pelos programas `.azlj` na pasta `programas/`.
