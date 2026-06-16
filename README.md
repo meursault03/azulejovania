@@ -4,6 +4,8 @@ Azulejovania é um conjunto de animações em pixel art feitas com a linguagem *
 
 O projeto usa o runtime da linguagem Azulejo para abrir arquivos `.azlj` no **LÖVE2D** e adiciona um menu em Lua para escolher qual animação executar.
 
+Como a linguagem Azulejo não oferece entrada de dados pelo terminal, a seleção da disciplina fica em `menu.lua`. Os conteúdos exibidos para as disciplinas ficam nos arquivos `.azlj`.
+
 A proposta é representar três disciplinas do curso por meio de pequenas cenas animadas em estilo 16-bit.
 
 ## Programas disponíveis
@@ -112,7 +114,7 @@ Usando o caminho completo do LÖVE2D no Windows:
 
 ## Como os arquivos funcionam
 
-O menu é escrito em Lua comum. Ele lê a opção digitada no terminal e executa o arquivo `.azlj` correspondente.
+O menu é escrito em Lua comum apenas para ler a opção digitada no terminal. Depois da escolha, ele executa o arquivo `.azlj` correspondente.
 
 As animações ficam nos arquivos Azulejo:
 
@@ -164,6 +166,6 @@ azulejovania/
 
 ## Observação sobre autoria
 
-O repositório original é [Azulejo](https://github.com/Anthhon/azulejo/tree/main) esolang criada para a disciplina de paradigmas de programação. Tonha is added
+O repositório original é [Azulejo](https://github.com/Anthhon/azulejo/tree/main), uma esolang criada para a disciplina de paradigmas de programação.
 
 A parte individual deste repositório é composta pelo menu de execução e pelos programas `.azlj` na pasta `programas/`.
