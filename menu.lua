@@ -3,16 +3,19 @@ local programas = {
         numero = "1",
         nome = "Estruturas de Dados",
         arquivo = "programas/estruturas_dados.azlj",
+        descricao = "Cena de arvore binaria com nos se acendendo.",
     },
     {
         numero = "2",
         nome = "Algebra Linear",
         arquivo = "programas/algebra_linear.azlj",
+        descricao = "Cena de vetores e transformacoes no plano.",
     },
     {
         numero = "3",
         nome = "Circuitos Digitais",
         arquivo = "programas/circuitos_digitais.azlj",
+        descricao = "Cena de sinais passando por um circuito logico.",
     },
 }
 
@@ -33,6 +36,8 @@ local function executar(programa)
     }, " ")
 
     print("")
+    print("Disciplina: " .. programa.nome)
+    print("Relacao com a disciplina: " .. programa.descricao)
     print("Executando: " .. comando)
     print("Feche a janela do LOVE para voltar ao menu.")
     print("")
@@ -63,6 +68,12 @@ while true do
     io.write("Escolha uma disciplina: ")
 
     local escolha = io.read("*l")
+
+    if escolha == nil then
+        print("")
+        print("Entrada encerrada.")
+        break
+    end
 
     if escolha == "0" then
         print("Encerrado.")
