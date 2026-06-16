@@ -1,0 +1,345 @@
+size 64x36
+type animation
+framerate 0.10
+loop false
+
+background #05050B
+color #0D0A12
+fill 1,29 64,36
+color #16101F
+fill 7,12 57,31
+fill 2,10 13,31
+fill 52,10 63,31
+fill 21,8 43,31
+color #261832
+line 2,10 7,4
+line 7,4 13,10
+line 52,10 58,4
+line 58,4 63,10
+line 21,8 32,3
+line 32,3 43,8
+color #332242
+rect 3,12 12,29
+rect 53,12 62,29
+rect 18,7 46,31
+line 18,7 32,2
+line 32,2 46,7
+color #4A315F
+rect 16,5 48,30
+circle 32,8 10
+color #0A1020
+fill 18,8 46,30
+color #173048
+fill 20,9 44,28
+color #231A32
+fill 1,31 64,36
+color #3A2B4C
+line 32,5 32,30
+line 20,14 44,14
+line 19,21 45,21
+line 22,9 42,28
+line 42,9 22,28
+color #2B213D
+rect 5,15 10,24
+rect 55,15 60,24
+rect 23,32 41,36
+color #4A315F
+line 6,17 9,17
+line 6,21 9,21
+line 56,17 59,17
+line 56,21 59,21
+color #3A3150
+line 32,10 22,17
+line 32,10 42,17
+line 22,17 15,25
+line 22,17 28,25
+line 42,17 36,25
+line 42,17 49,25
+color #5B4A6E
+circle 32,10 3
+fill 31,9 33,11
+circle 22,17 3
+fill 21,16 23,18
+circle 42,17 3
+fill 41,16 43,18
+circle 15,25 3
+fill 14,24 16,26
+circle 28,25 3
+fill 27,24 29,26
+circle 36,25 3
+fill 35,24 37,26
+circle 49,25 3
+fill 48,24 50,26
+
+@frame
+color #F5C95A
+circle 32,10 3
+fill 31,9 33,11
+color #FFF0A0
+pixel 32,10
+
+@frame
+color #F5C95A
+circle 32,10 3
+fill 31,9 33,11
+color #E64F7A
+line 32,10 22,17
+circle 22,17 3
+fill 21,16 23,18
+color #FFF0A0
+pixel 32,10
+pixel 22,17
+
+@frame
+color #F5C95A
+circle 32,10 3
+fill 31,9 33,11
+color #E64F7A
+line 32,10 22,17
+circle 22,17 3
+fill 21,16 23,18
+color #62D7FF
+line 32,10 42,17
+circle 42,17 3
+fill 41,16 43,18
+color #FFF0A0
+pixel 32,10
+pixel 22,17
+pixel 42,17
+
+@frame
+color #F5C95A
+circle 32,10 3
+fill 31,9 33,11
+color #E64F7A
+line 32,10 22,17
+circle 22,17 3
+fill 21,16 23,18
+line 22,17 15,25
+circle 15,25 3
+fill 14,24 16,26
+color #62D7FF
+line 32,10 42,17
+circle 42,17 3
+fill 41,16 43,18
+color #FFF0A0
+pixel 15,25
+
+@frame
+color #F5C95A
+circle 32,10 3
+fill 31,9 33,11
+color #E64F7A
+line 32,10 22,17
+circle 22,17 3
+fill 21,16 23,18
+line 22,17 15,25
+circle 15,25 3
+fill 14,24 16,26
+line 22,17 28,25
+circle 28,25 3
+fill 27,24 29,26
+color #62D7FF
+line 32,10 42,17
+circle 42,17 3
+fill 41,16 43,18
+color #FFF0A0
+pixel 28,25
+
+@frame
+color #F5C95A
+circle 32,10 3
+fill 31,9 33,11
+color #E64F7A
+line 32,10 22,17
+line 22,17 15,25
+line 22,17 28,25
+circle 22,17 3
+fill 21,16 23,18
+circle 15,25 3
+fill 14,24 16,26
+circle 28,25 3
+fill 27,24 29,26
+color #62D7FF
+line 32,10 42,17
+line 42,17 36,25
+circle 42,17 3
+fill 41,16 43,18
+circle 36,25 3
+fill 35,24 37,26
+color #FFF0A0
+pixel 36,25
+
+@frame
+color #F5C95A
+circle 32,10 3
+fill 31,9 33,11
+color #E64F7A
+line 32,10 22,17
+line 22,17 15,25
+line 22,17 28,25
+circle 22,17 3
+fill 21,16 23,18
+circle 15,25 3
+fill 14,24 16,26
+circle 28,25 3
+fill 27,24 29,26
+color #62D7FF
+line 32,10 42,17
+line 42,17 36,25
+line 42,17 49,25
+circle 42,17 3
+fill 41,16 43,18
+circle 36,25 3
+fill 35,24 37,26
+circle 49,25 3
+fill 48,24 50,26
+color #FFF0A0
+pixel 49,25
+
+@frame
+color #F5C95A
+line 32,10 22,17
+line 32,10 42,17
+line 22,17 15,25
+line 22,17 28,25
+line 42,17 36,25
+line 42,17 49,25
+circle 32,10 3
+fill 31,9 33,11
+circle 22,17 3
+fill 21,16 23,18
+circle 42,17 3
+fill 41,16 43,18
+circle 15,25 3
+fill 14,24 16,26
+circle 28,25 3
+fill 27,24 29,26
+circle 36,25 3
+fill 35,24 37,26
+circle 49,25 3
+fill 48,24 50,26
+color #FFF0A0
+pixel 32,10
+pixel 22,17
+pixel 42,17
+pixel 15,25
+pixel 28,25
+pixel 36,25
+pixel 49,25
+
+@frame
+color #F5C95A
+line 32,10 22,17
+line 32,10 42,17
+line 22,17 15,25
+line 22,17 28,25
+line 42,17 36,25
+line 42,17 49,25
+circle 32,10 3
+fill 31,9 33,11
+circle 42,17 3
+fill 41,16 43,18
+circle 36,25 3
+fill 35,24 37,26
+circle 49,25 3
+fill 48,24 50,26
+color #FF4F6D
+line 32,10 22,17
+line 22,17 15,25
+line 22,17 28,25
+circle 22,17 3
+fill 21,16 23,18
+circle 15,25 3
+fill 14,24 16,26
+circle 28,25 3
+fill 27,24 29,26
+color #8C5CFF
+rect 13,14 30,28
+
+@frame
+color #F5C95A
+line 32,10 22,17
+line 32,10 42,17
+line 22,17 15,25
+line 22,17 28,25
+line 42,17 36,25
+line 42,17 49,25
+circle 32,10 3
+fill 31,9 33,11
+circle 22,17 3
+fill 21,16 23,18
+circle 42,17 3
+fill 41,16 43,18
+circle 15,25 3
+fill 14,24 16,26
+circle 28,25 3
+fill 27,24 29,26
+circle 36,25 3
+fill 35,24 37,26
+circle 49,25 3
+fill 48,24 50,26
+color #A76CFF
+line 24,14 28,9
+line 28,9 35,8
+line 35,8 32,6
+line 35,8 32,10
+color #FFFFFF
+pixel 22,17
+pixel 32,10
+
+@frame
+color #E64F7A
+line 28,13 18,23
+line 28,13 39,23
+line 39,23 32,28
+line 39,23 50,28
+circle 28,13 3
+fill 27,12 29,14
+circle 18,23 3
+fill 17,22 19,24
+circle 39,23 3
+fill 38,22 40,24
+circle 32,28 2
+fill 32,28 32,28
+circle 50,28 2
+fill 50,28 50,28
+color #64E6C7
+rect 15,10 52,30
+line 28,10 28,28
+line 18,28 50,28
+
+@frame
+color #B8F26A
+line 32,10 22,17
+line 32,10 42,17
+line 22,17 15,25
+line 22,17 28,25
+line 42,17 36,25
+line 42,17 49,25
+circle 32,10 3
+fill 31,9 33,11
+circle 22,17 3
+fill 21,16 23,18
+circle 42,17 3
+fill 41,16 43,18
+circle 15,25 3
+fill 14,24 16,26
+circle 28,25 3
+fill 27,24 29,26
+circle 36,25 3
+fill 35,24 37,26
+circle 49,25 3
+fill 48,24 50,26
+color #F5C95A
+rect 14,8 50,29
+line 32,7 32,29
+line 15,29 49,29
+color #FFFFFF
+pixel 32,10
+pixel 22,17
+pixel 42,17
+pixel 15,25
+pixel 28,25
+pixel 36,25
+pixel 49,25
